@@ -25,7 +25,7 @@ var gulp = require('gulp');
         });
     });
 
-    gulp.task('pug', function() {
+    gulp.task('html', function() {
         return gulp.src("./app/pug/index.pug")
             .pipe(pug())
             .pipe(gulp.dest("./app"))
