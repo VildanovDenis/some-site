@@ -1,0 +1,15 @@
+section(class="wrapper")
+  div(class="content")
+    h2(class="content__title") Найдено 666 квартирэ
+    div(class="cards")
+      div(class="cards__header")
+        span Сортировать по:
+        ul(class="no-list x-list")
+          li
+            a(class="sort-link sort-link--active") По цене
+          li
+            a(class="sort-link") По комнатам
+      include _card
+      div(class="cards__paginaton")
+        button(class="cards__pagination-button") Показать еще 20
+    include _form

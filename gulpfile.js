@@ -7,7 +7,7 @@ var gulp = require('gulp');
     rename = require('gulp-rename'); // Подключаем библиотеку для переименования файлов
     autoprefixer = require('gulp-autoprefixer');
     pug = require('gulp-pug');
-
+    
     gulp.task('sass', function(){
         return gulp.src('app/sass/**/*.scss') // Берем все sass файлы из папки sass и дочерних, если таковые будут
             .pipe(sass())
@@ -56,4 +56,4 @@ var gulp = require('gulp');
         gulp.watch('app/*.html', gulp.parallel('code')); // Наблюдение за HTML файлами в корне проекта
         gulp.watch(['app/js/**/*.js'], gulp.parallel('scripts')); // Наблюдение за главным JS файлом и за библиотеками
     });
-    gulp.task('default', gulp.parallel('gulp', 'sass', 'css-libs', 'browser-sync', 'watch'));
+    gulp.task('default', gulp.parallel('sass', 'css-libs', 'browser-sync', 'watch'));
