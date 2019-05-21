@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Open-sans', sans-serif;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+}
+.no-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.x-list {
+  display: flex;
+  flex-direction: row;
+}
+.wrapper {
+  max-width: $maxwidth;
+  margin: 0 auto;
+}
+@mixin wrapper($bg) {
+  background-color: $bg;
+}
