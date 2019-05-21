@@ -1,0 +1,135 @@
+.cards__card-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-right: -50px;
+}
+.cards__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  padding-top: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  border: 1px solid $red;
+  border-radius: 4px;
+  &-image-wrapper {
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  &-img {
+    vertical-align: middle;
+  }
+  &-title {
+    min-height: 60px;
+    margin: 0 50px;
+    margin-bottom: 25px;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: $bold;
+    color: $mainblue;
+  }
+  &-list {
+    position: relative;
+    margin: 0 50px;
+    margin-bottom: 40px;
+    padding-left: 10px;
+    justify-content: space-between;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 3px;
+      height: 86%;
+      background-color: $mainblue;
+    }
+  }
+  &-list-item {
+    width: 30%;
+    font-size: 16px;
+    &:first-child {
+      width: 33%;
+      color: $mainblue;
+    }
+    &:last-child {
+      width: 20%;
+    }
+    & span {
+      display: block;
+      &:first-child {
+        line-height: 7px;
+      }
+      &:last-child {
+        line-height: 27px;
+      }
+    }
+    &:last-child span:first-child {
+      line-height: 18px;
+    }
+    &:last-child span:last-child {
+      line-height: 20px;
+    }
+  }
+  &-price {
+    font-size: 24px;
+    font-weight: $semibold;
+    line-height: 24px;
+    color: $black;
+    margin: 0 50px;
+    margin-bottom: 30px;
+  }
+  &-status {
+    padding: 8px;
+    font-size: 12px;
+    font-weight: $semibold;
+    letter-spacing: 0.6px;
+    line-height: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $white;
+  }
+}
+.cards__card--free {
+  border-color: $mainblue;
+  & .cards__card-status {
+    background-color: $mainblue;
+  }
+}
+.cards__card--booked {
+  border-color: $coffee;
+  & .cards__card-status {
+    background-color: $coffee;
+  }
+}
+.cards__card--saled {
+  border-color: $gray;
+  & .cards__card-status {
+    background-color: $gray;
+  }
+}
+.cards__card-offer-list {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  display: flex;
+  flex-direction: row;
+  max-width: 200px;
+  margin: 0;
+  padding: 0; 
+  text-transform: uppercase;
+  list-style: none;
+  & li {
+    margin-right: 20px;
+    padding: 3px;
+    border-radius: 2px;
+    font-size: 12px;
+    line-height: 12px;
+    background-color: $red;
+    color: $white;
+  }
+}
