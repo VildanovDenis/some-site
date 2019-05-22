@@ -1,3 +1,5 @@
+import 'unfetch/polyfill';
+
 // Скролл
 var scrollButton = document.getElementById("scroll");
 

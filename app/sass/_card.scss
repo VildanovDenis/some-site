@@ -133,3 +133,32 @@
     color: $white;
   }
 }
+@media (min-width: 950px) and (max-width: 1160px) {
+  .cards__card-wrapper {
+    margin-right: 0px;
+  }
+  .cards__card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 650px) and (max-width: 950px) {
+  .cards__card-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cards__card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 650px) {
+  .cards__card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cards__card-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

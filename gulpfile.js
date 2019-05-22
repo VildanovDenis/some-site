@@ -7,6 +7,7 @@ var gulp = require('gulp');
     rename = require('gulp-rename'); // Подключаем библиотеку для переименования файлов
     autoprefixer = require('gulp-autoprefixer');
     pug = require('gulp-pug');
+    var jsImport = require('gulp-js-import');
     
     gulp.task('sass', function(){
         return gulp.src('app/sass/**/*.scss') // Берем все sass файлы из папки sass и дочерних, если таковые будут

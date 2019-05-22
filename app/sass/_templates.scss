@@ -63,3 +63,13 @@ h1, h2, h3, h4, h5, p {
   border: none;
   opacity: 0.5;
 }
+@media (min-width: 950px) and (max-width: 1260px) {
+  .scroll-to-top {
+    right: 10px;
+  }
+}
+@media (max-width: 950px) {
+  .scroll-to-top {
+    right: 0px;
+  }
+}

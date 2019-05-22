@@ -72,6 +72,14 @@ h1, h2, h3, h4, h5, p {
   border: none;
   opacity: 0.5; }
 
+@media (min-width: 950px) and (max-width: 1260px) {
+  .scroll-to-top {
+    right: 10px; } }
+
+@media (max-width: 950px) {
+  .scroll-to-top {
+    right: 0px; } }
+
 .wrapper--header {
   max-width: 100%;
   background-color: #002f2f; }
@@ -206,6 +214,7 @@ h1, h2, h3, h4, h5, p {
 
 .cards {
   padding: 30px 100px 75px;
+  margin: 0 auto;
   margin-bottom: 70px;
   background-color: #fffefd; }
   .cards__header {
@@ -395,6 +404,100 @@ h1, h2, h3, h4, h5, p {
   background-color: #a7a37e;
   color: #fffefd; }
 
+@media (min-width: 1160px) and (max-width: 1260px) {
+  .cards__pagination-button {
+    width: 100%; }
+  .cards {
+    padding-left: 50px;
+    padding-right: 50px; }
+  .mailing {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; } }
+
+@media (min-width: 650px) and (max-width: 950px) {
+  .cards__pagination-button {
+    width: 100%; }
+  .cards {
+    padding-left: 20px;
+    padding-right: 20px; }
+  .mailing {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px; }
+    .mailing__form {
+      width: auto;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .mailing__form div:first-child {
+        width: 100%;
+        margin-bottom: 20px; }
+      .mailing__form div:last-child {
+        width: 100%; } }
+
+@media (max-width: 650px) {
+  .content__title {
+    padding: 0 20px; }
+  .cards__pagination-button {
+    width: 100%; }
+  .cards {
+    padding-left: 20px;
+    padding-right: 20px; }
+  .mailing {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px; }
+    .mailing__form {
+      width: auto;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .mailing__form div:first-child {
+        width: 100%;
+        margin-bottom: 20px; }
+      .mailing__form div:last-child {
+        width: 100%; } }
+
+@media (max-width: 375px) {
+  .content__title {
+    padding: 0 20px;
+    font-size: 40px; } }
+
 .cards__card-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -541,3 +644,26 @@ h1, h2, h3, h4, h5, p {
     line-height: 12px;
     background-color: #ff4444;
     color: #fffefd; }
+
+@media (min-width: 950px) and (max-width: 1160px) {
+  .cards__card-wrapper {
+    margin-right: 0px; }
+  .cards__card {
+    margin-left: auto;
+    margin-right: auto; } }
+
+@media (min-width: 650px) and (max-width: 950px) {
+  .cards__card-wrapper {
+    margin-left: auto;
+    margin-right: auto; }
+  .cards__card {
+    margin-left: auto;
+    margin-right: auto; } }
+
+@media (max-width: 650px) {
+  .cards__card {
+    margin-left: auto;
+    margin-right: auto; }
+  .cards__card-wrapper {
+    margin-left: auto;
+    margin-right: auto; } }

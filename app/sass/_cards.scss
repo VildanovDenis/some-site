@@ -13,6 +13,7 @@
 }
 .cards {
   padding: 30px 100px 75px;
+  margin: 0 auto;
   margin-bottom: 70px;
   background-color: $white;
   &__header {
@@ -154,4 +155,80 @@
   border-radius: 4px;
   background-color: $coffee;
   color: $white;
+}
+@media (min-width: 1160px) and (max-width: 1260px) {
+  .cards__pagination-button {
+    width: 100%;
+  }
+  .cards {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .mailing {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 650px) and (max-width: 950px) {
+  .cards__pagination-button {
+    width: 100%;
+  }
+  .cards {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .mailing {
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+    &__form {
+      width: auto;
+      flex-direction: column;
+      justify-content: space-between;
+      & div:first-child {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      & div:last-child {
+        width: 100%
+      }
+    }
+  }
+}
+@media (max-width: 650px) {
+  .content__title {
+    padding: 0 20px;
+  }
+  .cards__pagination-button {
+    width: 100%;
+  }
+  .cards {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .mailing {
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+    &__form {
+      width: auto;
+      flex-direction: column;
+      justify-content: space-between;
+      & div:first-child {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      & div:last-child {
+        width: 100%
+      }
+    }
+  }
+}
+@media (max-width: 375px) {
+  .content__title {
+    padding: 0 20px;
+    font-size: 40px;
+  }
 }
