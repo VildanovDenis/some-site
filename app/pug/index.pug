@@ -7,5 +7,8 @@ html
         link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet")
         link(href="/css/index.css" rel="stylesheet")
     body
-        include modules/_header
-        include modules/_cards
+        main
+            include modules/_header
+            include modules/_cards
+        button(type="button" id="scroll" class="scroll-to-top")
+        script(type="text/javascript" src="./js/index.js")

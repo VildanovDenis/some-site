@@ -37,3 +37,29 @@ h1, h2, h3, h4, h5, p {
 .f13 {
   font-size: 13px;
 }
+.invalid-form-message {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  color: $white;
+  background-color: $red;
+  border-radius: 4px;
+}
+.scroll-to-top {
+  position: fixed;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%) scale(0.8);
+  display: none;
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  background-image: url("/img/UP.jpg");
+  background-color: $black;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: none;
+  opacity: 0.5;
+}
