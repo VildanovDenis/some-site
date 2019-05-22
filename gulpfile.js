@@ -34,6 +34,12 @@ var gulp = require('gulp');
             // .pipe(browserSync.reload({ stream: true }));
       });
 
+    gulp.task('import', function() {
+    return gulp.src('./app/js/index.js')
+            .pipe(jsImport({hideConsole: true}))
+            .pipe(gulp.dest('dist'));
+    });
+
     gulp.task('scripts', function() {
         return gulp.src(['app/js/**/*.js'])
         .pipe(browserSync.reload({ stream: true }))
