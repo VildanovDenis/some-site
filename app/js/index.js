@@ -1,3 +1,7 @@
+import Promise from 'promise-polyfill';
+
+window.Promise = Promise;
+
 import {fetch} from 'whatwg-fetch';
 
 window.fetch = fetch;
@@ -140,9 +144,12 @@ function showCards(cards) {
 
 
     var infoList = document.createElement("ul");
-    infoList.classList.add("no-list", "x-list", "cards__card-list");
+    infoList.classList.add("no-list", "x-list");
+    infoList.classList.add("x-list");
+    infoList.classList.add("cards__card-list");
     var li1 = document.createElement("li");
-    li1.classList.add("cards__card-list-item", "cards__card-list-item--blue");
+    li1.classList.add("cards__card-list-item");
+    li1.classList.add("cards__card-list-item--blue");
     li1.innerText = item.info[0];
     var li2 = document.createElement("li");
     li2.classList.add("cards__card-list-item");

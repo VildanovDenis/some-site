@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "gulp-pug": "^4.0.1",
+    "promise-polyfill": "8.1.0",
     "unfetch": "^4.1.0",
     "whatwg-fetch": "^3.0.0"
   }
