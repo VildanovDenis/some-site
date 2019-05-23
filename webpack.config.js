@@ -21,5 +21,5 @@ module.exports = {
     filename: 'index.bundle.js'
   },
   watch: true,
-  mode: 'development'
+  mode: 'production'
 }

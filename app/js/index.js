@@ -83,18 +83,23 @@ mailingButton.addEventListener("click", function(e) {
 
 // Сортировка
 var sortByPriceLink = document.getElementById("by_price");
+var isSorted = false;
 
 sortByPriceLink.addEventListener("click", function(e) {
   e.preventDefault();
-  console.log(cardsData.sort(function(a, b) {
-    if (a.price > b.price) {
-      return 1;
-    }
-    if (a.price > b.price) {
-      return -1;
-    }
-    return 0
-  }));
+  e.target.classList.add("sort-link--active");
+  e.target.classList.toggle("sort-link--reverse");
+  if (isSorted) {
+    cardsData = cardsData.reverse();
+    isSorted = false;
+  } else {
+    cardsData = cardsData.sort(function(a, b) {
+    return Number(a.price) - Number(b.price)
+    })
+    isSorted = true;
+  }
+  cardsWrapper.innerHTML = "";
+  showCards(cardsData);
 })
 // Контейнер карточек
 var cardsWrapper = document.getElementsByClassName("cards__card-wrapper")[0];
@@ -164,11 +169,14 @@ function showCards(cards) {
     card.appendChild(infoList);
 
 
-    var price = document.createElement("span");
-    price.classList.add("cards__card-price");
-    price.innerText = item.price;
+    var priceEl = document.createElement("span");
+    priceEl.classList.add("cards__card-price");
+    var price = Number(item.price);
+    var localPrice = price.toLocaleString("ru");
+    var priceStrg = localPrice + " руб.";
+    priceEl.innerHTML = priceStrg;
 
-    card.appendChild(price);
+    card.appendChild(priceEl);
 
     var status = document.createElement("span");
     status.classList.add("cards__card-status");
