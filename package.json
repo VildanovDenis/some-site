@@ -4,11 +4,15 @@
   "description": "html, css and some js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "node ./node_modules/webpack/bin/webpack.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-loader": "^8.0.6",
     "browser-sync": "^2.26.5",
     "del": "^4.1.1",
     "gulp": "^4.0.2",
@@ -20,10 +24,13 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglifyjs": "^0.6.2",
-    "imagemin-pngquant": "^7.0.0"
+    "imagemin-pngquant": "^7.0.0",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
   },
   "dependencies": {
     "gulp-pug": "^4.0.1",
-    "unfetch": "^4.1.0"
+    "unfetch": "^4.1.0",
+    "whatwg-fetch": "^3.0.0"
   }
 }

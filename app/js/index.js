@@ -1,4 +1,6 @@
-// import 'unfetch/polyfill';
+import {fetch} from 'whatwg-fetch';
+
+window.fetch = fetch;
 
 // Скролл
 var scrollButton = document.getElementById("scroll");
@@ -75,8 +77,27 @@ mailingButton.addEventListener("click", function(e) {
   }
 });
 
+// Сортировка
+var sortByPriceLink = document.getElementById("by_price");
+
+sortByPriceLink.addEventListener("click", function(e) {
+  e.preventDefault();
+  console.log(cardsData.sort(function(a, b) {
+    if (a.price > b.price) {
+      return 1;
+    }
+    if (a.price > b.price) {
+      return -1;
+    }
+    return 0
+  }));
+})
 // Контейнер карточек
 var cardsWrapper = document.getElementsByClassName("cards__card-wrapper")[0];
+
+function onFavBtnClick(btn) {
+  btn.classList.toggle("cards__card-fav-button--fill");
+}
 
 // Отрисовка карточек
 function showCards(cards) {
@@ -161,23 +182,45 @@ function showCards(cards) {
 
     card.appendChild(offersList);
 
+    var favBtn = document.createElement("button");
+    favBtn.setAttribute("type", "button");
+    favBtn.classList.add("cards__card-fav-button");
+    if (item.favorite) {
+      favBtn.classList.add("cards__card-fav-button--fill");
+    }
+    favBtn.addEventListener("click", function(e) { onFavBtnClick(e.target) });
+
+    card.appendChild(favBtn);
+
     cardsWrapper.appendChild(card);
   })
 }
 
+// загружаем корректные карточки
+cardsWrapper.innerHTML = "";
+var cardsData = [];
+
+fetch("/initialcards.json")
+  .then(res => res.json())
+  .then(data => {
+    cardsData = data.cards;
+    showCards(cardsData);
+  })
+  .catch(err => console.log(err));
+
 // Кнопка загрузки карточек
 var loadMoreCardsBtn = document.getElementsByClassName("cards__pagination-button")[0];
-var newCardsData = [];
 
 loadMoreCardsBtn.addEventListener("click", function(e) {
   e.preventDefault();
   fetch("/cards.json")
     .then((res) => res.json())
     .then(data => {
-      newCardsData = data.cards
+      cardsData = [...cardsData, ...data.cards];
+      return data.cards
     })
-    .then(() => {
-      showCards(newCardsData);
+    .then((cards) => {
+      showCards(cards);
     })
     .catch(err => console.log(err));
 })
